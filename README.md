@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# 🤖 Ant Design X Chat Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+基于 Ant Design X 的 AI 聊天界面演示项目
 
-## Available Scripts
+## ✨ 项目特性
 
-In the project directory, you can run:
+- 🎨 **现代化 UI**: 基于 Ant Design X 的聊天组件
+- 🌊 **流式响应**: 支持实时显示 AI 回复内容
+- 🔗 **API 集成**: 支持多种 AI 服务（阿里云通义千问、OpenAI 等）
+- 📱 **响应式设计**: 适配不同屏幕尺寸
+- 🛠️ **TypeScript**: 完整的类型支持
+- 📚 **完整文档**: 包含配置指南和接入文档
 
-### `npm start`
+## 🚀 快速开始
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 环境要求
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js >= 16
+- npm 或 yarn
 
-### `npm test`
+### 安装依赖
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+### 配置 API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. 复制 `.env.example` 到 `.env`
+2. 填入您的 API 配置：
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+REACT_APP_API_BASE_URL=你的API地址
+REACT_APP_API_KEY=你的API密钥
+REACT_APP_MODEL_NAME=模型名称
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 启动项目
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+项目将在 [http://localhost:3001](http://localhost:3001) 运行
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📖 文档
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [API 配置说明](./docs/API配置说明.md)
+- [真实 API 接入指南](./docs/真实API接入指南.md)
+- [需求文档目录](./docs/需求文档目录.md)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🏗️ 技术栈
 
-## Learn More
+- **React 18** - 用户界面框架
+- **TypeScript** - 类型安全
+- **Ant Design X** - 聊天组件库
+- **Create React App** - 项目脚手架
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📦 核心组件
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `useXAgent` - 处理请求逻辑
+- `useXChat` - 管理聊天状态
+- `XRequest` - API 客户端
+- `Sender` - 消息输入组件
+- `Bubble.List` - 消息显示组件
+
+## 🔧 可用脚本
+
+- `npm start` - 启动开发服务器
+- `npm test` - 运行测试
+- `npm run build` - 构建生产版本
+- `npm run eject` - 弹出配置文件
+
+## 📄 许可证
+
+MIT License
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
