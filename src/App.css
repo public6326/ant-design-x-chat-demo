@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -34,5 +37,81 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* 自定义滚动条样式 */
+.App *::-webkit-scrollbar {
+  width: 6px;
+}
+
+.App *::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.App *::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.App *::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 聊天气泡动画 */
+.ant-bubble {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 发送按钮悬停效果 */
+.ant-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(24, 144, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+/* 输入框聚焦效果 */
+.ant-input:focus {
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* 卡片阴影效果 */
+.ant-card {
+  transition: box-shadow 0.3s ease;
+}
+
+.ant-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 标题渐变效果 */
+.App h2 {
+  background: linear-gradient(45deg, #1890ff, #52c41a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .App h2 {
+    font-size: 20px;
   }
 }
